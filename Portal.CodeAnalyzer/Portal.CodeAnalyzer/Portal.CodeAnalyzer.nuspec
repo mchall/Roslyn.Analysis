@@ -1,0 +1,23 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Portal.CodeAnalyzer</id>
+    <version>1.0.0.0</version>
+    <title>Portal.CodeAnalyzer</title>
+    <authors>Property24</authors>
+    <owners>Property24</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Portal.CodeAnalyzer</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2016 Property24</copyright>
+    <tags>Portal.CodeAnalyzer, analyzers</tags>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System" targetFramework="" />
+    </frameworkAssemblies>
+  </metadata>
+  <!-- The convention for analyzers is to put language agnostic dlls in analyzers\portable50 and language specific analyzers in either analyzers\portable50\cs or analyzers\portable50\vb -->
+  <files>
+    <file src="*.dll" target="analyzers\dotnet\cs" exclude="**\Microsoft.CodeAnalysis.*;**\System.Collections.Immutable.*;**\System.Reflection.Metadata.*;**\System.Composition.*" />
+    <file src="tools\*.ps1" target="tools\" />
+  </files>
+</package>
